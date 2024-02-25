@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: lemonchiffon;
+        }
+        .aa{
+            background-color: rgb(236, 253, 244);
+            border: 1px solid;
+            /* height: 300px;
+            width: 300px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="aa">
+    <img src="" alt="">
+   
+    <h2></h2>
+    <p></p>
+</div>
+   <script>
+    
+   var srcc=localStorage.getItem("data")
+   var a=JSON.parse(srcc)
+   console.log(a);
+
+
+   var img=document.getElementsByTagName("img")
+   img[0].setAttribute("src",a["image"])
+   img[0].style.height="200px"
+//    img[0].setAttribute(a["description"])
+var pp=document.getElementsByTagName("h2")
+pp[0].innerText=a["title"]
+
+var hh=document.getElementsByTagName("p")
+hh[0].innerText=a["description"]
+
+
+    </script>
+</body>
+</html>
